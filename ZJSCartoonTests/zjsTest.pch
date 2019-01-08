@@ -1,0 +1,23 @@
+//
+//  zjsTest.pch
+//  ZJSCartoonTests
+//
+//  Created by 周建顺 on 2019/1/4.
+//  Copyright © 2019 周建顺. All rights reserved.
+//
+
+#ifndef zjsTest_pch
+#define zjsTest_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define ZJS_TEST_WAIT do {\
+[self expectationForNotification:@"RSBaseTest" object:nil handler:nil];\
+[self waitForExpectationsWithTimeout:30 handler:nil];\
+} while (0);
+
+#define ZJS_TEST_NOTIFY \
+[[NSNotificationCenter defaultCenter] postNotificationName:@"RSBaseTest" object:nil];
+
+#endif /* zjsTest_pch */

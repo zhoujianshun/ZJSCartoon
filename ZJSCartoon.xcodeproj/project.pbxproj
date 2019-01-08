@@ -1,0 +1,1121 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0753339721DDE0A10023483D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0753339621DDE0A10023483D /* AppDelegate.m */; };
+		0753339A21DDE0A10023483D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0753339921DDE0A10023483D /* ViewController.m */; };
+		0753339D21DDE0A10023483D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0753339B21DDE0A10023483D /* Main.storyboard */; };
+		0753339F21DDE0A50023483D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0753339E21DDE0A50023483D /* Assets.xcassets */; };
+		075333A221DDE0A50023483D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075333A021DDE0A50023483D /* LaunchScreen.storyboard */; };
+		075333A521DDE0A50023483D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 075333A421DDE0A50023483D /* main.m */; };
+		075333AF21DDE0A60023483D /* ZJSCartoonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075333AE21DDE0A60023483D /* ZJSCartoonTests.m */; };
+		075333BA21DDE0A60023483D /* ZJSCartoonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075333B921DDE0A60023483D /* ZJSCartoonUITests.m */; };
+		075333CB21DDF5F60023483D /* ZJSBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 075333CA21DDF5F60023483D /* ZJSBaseRequest.m */; };
+		07CE98CF21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98CE21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m */; };
+		07CE98D221DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98D121DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.m */; };
+		07CE98D521DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98D421DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.m */; };
+		07CE98D921DF4AE600470E80 /* AppDelegate+ZJSSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98D821DF4AE600470E80 /* AppDelegate+ZJSSettings.m */; };
+		07CE98DD21DF503100470E80 /* ZJSCarttonApiTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98DC21DF503100470E80 /* ZJSCarttonApiTest.m */; };
+		07CE98ED21DF5DD400470E80 /* ZJSTableViewCellBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98E221DF5DD300470E80 /* ZJSTableViewCellBaseViewModel.m */; };
+		07CE98EE21DF5DD400470E80 /* ZJSTableViewHeaderBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98E321DF5DD300470E80 /* ZJSTableViewHeaderBaseViewModel.m */; };
+		07CE98EF21DF5DD400470E80 /* ZJSTableViewFooterBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98E521DF5DD300470E80 /* ZJSTableViewFooterBaseViewModel.m */; };
+		07CE98F021DF5DD400470E80 /* ZJSTableViewGroupBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98E921DF5DD300470E80 /* ZJSTableViewGroupBaseModel.m */; };
+		07CE98F521DF5E0800470E80 /* ZJSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98F421DF5E0800470E80 /* ZJSBaseViewController.m */; };
+		07CE98F821DF5E2F00470E80 /* ZJSBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98F721DF5E2F00470E80 /* ZJSBaseNavigationController.m */; };
+		07CE98FB21DF5E9700470E80 /* ZJSCartoonHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98FA21DF5E9700470E80 /* ZJSCartoonHomeViewController.m */; };
+		07CE98FE21DF5EAE00470E80 /* ZJSCartoonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98FD21DF5EAE00470E80 /* ZJSCartoonDetailViewController.m */; };
+		07CE990121DF5EFA00470E80 /* ZJSCartoonReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE990021DF5EFA00470E80 /* ZJSCartoonReadViewController.m */; };
+		07CE990721DF626600470E80 /* ZJSGetAllCartoonsHomeReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE990621DF626600470E80 /* ZJSGetAllCartoonsHomeReformer.m */; };
+		07CE990E21E2F00200470E80 /* NSString+ZJSUrlCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE990D21E2F00200470E80 /* NSString+ZJSUrlCode.m */; };
+		07CE991A21E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE991921E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.m */; };
+		07CE991D21E3026500470E80 /* ZJSCartoonHomeCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE991C21E3026500470E80 /* ZJSCartoonHomeCellViewModel.m */; };
+		07CE992621E3041200470E80 /* ZJSCollectionViewCellBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE991E21E3041000470E80 /* ZJSCollectionViewCellBaseViewModel.m */; };
+		07CE992721E3041200470E80 /* ZJSCollectionViewHeaderBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE992021E3041100470E80 /* ZJSCollectionViewHeaderBaseViewModel.m */; };
+		07CE992821E3041200470E80 /* ZJSCollectionViewGroupBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE992221E3041100470E80 /* ZJSCollectionViewGroupBaseViewModel.m */; };
+		07CE992921E3041200470E80 /* ZJSCollectionViewFooterBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE992421E3041100470E80 /* ZJSCollectionViewFooterBaseViewModel.m */; };
+		07CE992E21E34D1F00470E80 /* ZJSCartoonDetailCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE992D21E34D1F00470E80 /* ZJSCartoonDetailCellViewModel.m */; };
+		07CE993121E34D3500470E80 /* ZJSCartoonDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE993021E34D3500470E80 /* ZJSCartoonDetailCell.m */; };
+		07CE993421E34FEB00470E80 /* ZJSGetCartoonDetailReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE993321E34FEB00470E80 /* ZJSGetCartoonDetailReformer.m */; };
+		07CE993921E3541300470E80 /* ZJSCartoonReadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE993821E3541300470E80 /* ZJSCartoonReadCell.m */; };
+		07CE993C21E3542900470E80 /* ZJSCartoonReadCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE993B21E3542900470E80 /* ZJSCartoonReadCellViewModel.m */; };
+		07CE993F21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE993E21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m */; };
+		51FACC185DF0F02EBD849CCC /* Pods_ZJSCartoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00500B2D2C416684577DD154 /* Pods_ZJSCartoon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		075333AB21DDE0A60023483D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0753338A21DDE0A10023483D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0753339121DDE0A10023483D;
+			remoteInfo = ZJSCartoon;
+		};
+		075333B621DDE0A60023483D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0753338A21DDE0A10023483D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0753339121DDE0A10023483D;
+			remoteInfo = ZJSCartoon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00500B2D2C416684577DD154 /* Pods_ZJSCartoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJSCartoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0753339221DDE0A10023483D /* ZJSCartoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJSCartoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0753339521DDE0A10023483D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0753339621DDE0A10023483D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0753339821DDE0A10023483D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0753339921DDE0A10023483D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0753339C21DDE0A10023483D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0753339E21DDE0A50023483D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		075333A121DDE0A50023483D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		075333A321DDE0A50023483D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075333A421DDE0A50023483D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		075333AA21DDE0A60023483D /* ZJSCartoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZJSCartoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		075333AE21DDE0A60023483D /* ZJSCartoonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonTests.m; sourceTree = "<group>"; };
+		075333B021DDE0A60023483D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075333B521DDE0A60023483D /* ZJSCartoonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZJSCartoonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		075333B921DDE0A60023483D /* ZJSCartoonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonUITests.m; sourceTree = "<group>"; };
+		075333BB21DDE0A60023483D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		075333C921DDF5F60023483D /* ZJSBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSBaseRequest.h; sourceTree = "<group>"; };
+		075333CA21DDF5F60023483D /* ZJSBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSBaseRequest.m; sourceTree = "<group>"; };
+		07CE98CC21DF460D00470E80 /* ZJSNetworkContants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSNetworkContants.h; sourceTree = "<group>"; };
+		07CE98CD21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSGetAllCartoonsRequestApi.h; sourceTree = "<group>"; };
+		07CE98CE21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSGetAllCartoonsRequestApi.m; sourceTree = "<group>"; };
+		07CE98D021DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSGetCartoonDetailRequestApi.h; sourceTree = "<group>"; };
+		07CE98D121DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSGetCartoonDetailRequestApi.m; sourceTree = "<group>"; };
+		07CE98D321DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSGetCartoonChapterDetailRequestApi.h; sourceTree = "<group>"; };
+		07CE98D421DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSGetCartoonChapterDetailRequestApi.m; sourceTree = "<group>"; };
+		07CE98D721DF4AE600470E80 /* AppDelegate+ZJSSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+ZJSSettings.h"; sourceTree = "<group>"; };
+		07CE98D821DF4AE600470E80 /* AppDelegate+ZJSSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+ZJSSettings.m"; sourceTree = "<group>"; };
+		07CE98DC21DF503100470E80 /* ZJSCarttonApiTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCarttonApiTest.m; sourceTree = "<group>"; };
+		07CE98DE21DF584500470E80 /* zjsTest.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zjsTest.pch; sourceTree = "<group>"; };
+		07CE98E221DF5DD300470E80 /* ZJSTableViewCellBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSTableViewCellBaseViewModel.m; sourceTree = "<group>"; };
+		07CE98E321DF5DD300470E80 /* ZJSTableViewHeaderBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSTableViewHeaderBaseViewModel.m; sourceTree = "<group>"; };
+		07CE98E421DF5DD300470E80 /* ZJSTableViewGroupBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSTableViewGroupBaseModel.h; sourceTree = "<group>"; };
+		07CE98E521DF5DD300470E80 /* ZJSTableViewFooterBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSTableViewFooterBaseViewModel.m; sourceTree = "<group>"; };
+		07CE98E621DF5DD300470E80 /* ZJSTableViewCellBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSTableViewCellBaseViewModel.h; sourceTree = "<group>"; };
+		07CE98E721DF5DD300470E80 /* ZJSTableViewHeaderBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSTableViewHeaderBaseViewModel.h; sourceTree = "<group>"; };
+		07CE98E821DF5DD300470E80 /* ZJSTableViewFooterBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSTableViewFooterBaseViewModel.h; sourceTree = "<group>"; };
+		07CE98E921DF5DD300470E80 /* ZJSTableViewGroupBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSTableViewGroupBaseModel.m; sourceTree = "<group>"; };
+		07CE98EB21DF5DD300470E80 /* ZJSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSWebViewController.h; sourceTree = "<group>"; };
+		07CE98EC21DF5DD300470E80 /* ZJSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSWebViewController.m; sourceTree = "<group>"; };
+		07CE98F321DF5E0800470E80 /* ZJSBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSBaseViewController.h; sourceTree = "<group>"; };
+		07CE98F421DF5E0800470E80 /* ZJSBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSBaseViewController.m; sourceTree = "<group>"; };
+		07CE98F621DF5E2F00470E80 /* ZJSBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSBaseNavigationController.h; sourceTree = "<group>"; };
+		07CE98F721DF5E2F00470E80 /* ZJSBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSBaseNavigationController.m; sourceTree = "<group>"; };
+		07CE98F921DF5E9700470E80 /* ZJSCartoonHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonHomeViewController.h; sourceTree = "<group>"; };
+		07CE98FA21DF5E9700470E80 /* ZJSCartoonHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonHomeViewController.m; sourceTree = "<group>"; };
+		07CE98FC21DF5EAE00470E80 /* ZJSCartoonDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonDetailViewController.h; sourceTree = "<group>"; };
+		07CE98FD21DF5EAE00470E80 /* ZJSCartoonDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonDetailViewController.m; sourceTree = "<group>"; };
+		07CE98FF21DF5EFA00470E80 /* ZJSCartoonReadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonReadViewController.h; sourceTree = "<group>"; };
+		07CE990021DF5EFA00470E80 /* ZJSCartoonReadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonReadViewController.m; sourceTree = "<group>"; };
+		07CE990521DF626600470E80 /* ZJSGetAllCartoonsHomeReformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSGetAllCartoonsHomeReformer.h; sourceTree = "<group>"; };
+		07CE990621DF626600470E80 /* ZJSGetAllCartoonsHomeReformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSGetAllCartoonsHomeReformer.m; sourceTree = "<group>"; };
+		07CE990C21E2F00200470E80 /* NSString+ZJSUrlCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZJSUrlCode.h"; sourceTree = "<group>"; };
+		07CE990D21E2F00200470E80 /* NSString+ZJSUrlCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZJSUrlCode.m"; sourceTree = "<group>"; };
+		07CE991821E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonHomeCollectionViewCell.h; sourceTree = "<group>"; };
+		07CE991921E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonHomeCollectionViewCell.m; sourceTree = "<group>"; };
+		07CE991B21E3026500470E80 /* ZJSCartoonHomeCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonHomeCellViewModel.h; sourceTree = "<group>"; };
+		07CE991C21E3026500470E80 /* ZJSCartoonHomeCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonHomeCellViewModel.m; sourceTree = "<group>"; };
+		07CE991E21E3041000470E80 /* ZJSCollectionViewCellBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSCollectionViewCellBaseViewModel.m; sourceTree = "<group>"; };
+		07CE991F21E3041100470E80 /* ZJSCollectionViewGroupBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSCollectionViewGroupBaseViewModel.h; sourceTree = "<group>"; };
+		07CE992021E3041100470E80 /* ZJSCollectionViewHeaderBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSCollectionViewHeaderBaseViewModel.m; sourceTree = "<group>"; };
+		07CE992121E3041100470E80 /* ZJSCollectionViewCellBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSCollectionViewCellBaseViewModel.h; sourceTree = "<group>"; };
+		07CE992221E3041100470E80 /* ZJSCollectionViewGroupBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSCollectionViewGroupBaseViewModel.m; sourceTree = "<group>"; };
+		07CE992321E3041100470E80 /* ZJSCollectionViewFooterBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSCollectionViewFooterBaseViewModel.h; sourceTree = "<group>"; };
+		07CE992421E3041100470E80 /* ZJSCollectionViewFooterBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSCollectionViewFooterBaseViewModel.m; sourceTree = "<group>"; };
+		07CE992521E3041200470E80 /* ZJSCollectionViewHeaderBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSCollectionViewHeaderBaseViewModel.h; sourceTree = "<group>"; };
+		07CE992C21E34D1F00470E80 /* ZJSCartoonDetailCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonDetailCellViewModel.h; sourceTree = "<group>"; };
+		07CE992D21E34D1F00470E80 /* ZJSCartoonDetailCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonDetailCellViewModel.m; sourceTree = "<group>"; };
+		07CE992F21E34D3500470E80 /* ZJSCartoonDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonDetailCell.h; sourceTree = "<group>"; };
+		07CE993021E34D3500470E80 /* ZJSCartoonDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonDetailCell.m; sourceTree = "<group>"; };
+		07CE993221E34FEB00470E80 /* ZJSGetCartoonDetailReformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSGetCartoonDetailReformer.h; sourceTree = "<group>"; };
+		07CE993321E34FEB00470E80 /* ZJSGetCartoonDetailReformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSGetCartoonDetailReformer.m; sourceTree = "<group>"; };
+		07CE993721E3541300470E80 /* ZJSCartoonReadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonReadCell.h; sourceTree = "<group>"; };
+		07CE993821E3541300470E80 /* ZJSCartoonReadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonReadCell.m; sourceTree = "<group>"; };
+		07CE993A21E3542900470E80 /* ZJSCartoonReadCellViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonReadCellViewModel.h; sourceTree = "<group>"; };
+		07CE993B21E3542900470E80 /* ZJSCartoonReadCellViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonReadCellViewModel.m; sourceTree = "<group>"; };
+		07CE993D21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSGetCartoonChapterDetailReformer.h; sourceTree = "<group>"; };
+		07CE993E21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSGetCartoonChapterDetailReformer.m; sourceTree = "<group>"; };
+		07CE994121E47B1A00470E80 /* ZJSCartoonRead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonRead.h; sourceTree = "<group>"; };
+		1D21F46B9EAA8E994FB90DFF /* Pods-ZJSCartoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJSCartoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJSCartoon/Pods-ZJSCartoon.release.xcconfig"; sourceTree = "<group>"; };
+		4B8AD86C24754969121A6A76 /* Pods-ZJSCartoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJSCartoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJSCartoon/Pods-ZJSCartoon.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0753338F21DDE0A10023483D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51FACC185DF0F02EBD849CCC /* Pods_ZJSCartoon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075333A721DDE0A60023483D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075333B221DDE0A60023483D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0753338921DDE0A10023483D = {
+			isa = PBXGroup;
+			children = (
+				0753339421DDE0A10023483D /* ZJSCartoon */,
+				075333AD21DDE0A60023483D /* ZJSCartoonTests */,
+				075333B821DDE0A60023483D /* ZJSCartoonUITests */,
+				0753339321DDE0A10023483D /* Products */,
+				E3F067F66B98D3A8A08581E4 /* Pods */,
+				FD17AD42A8B2EE750C693258 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0753339321DDE0A10023483D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0753339221DDE0A10023483D /* ZJSCartoon.app */,
+				075333AA21DDE0A60023483D /* ZJSCartoonTests.xctest */,
+				075333B521DDE0A60023483D /* ZJSCartoonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0753339421DDE0A10023483D /* ZJSCartoon */ = {
+			isa = PBXGroup;
+			children = (
+				07CE990A21E2F00200470E80 /* Categorys */,
+				07CE990221DF61B100470E80 /* Service */,
+				07CE98E021DF5DD300470E80 /* Basic */,
+				07CE98DF21DF5C8600470E80 /* Controllers */,
+				07CE98D621DF4A8500470E80 /* AppDelegate */,
+				075333C721DDF4D80023483D /* Network */,
+				0753339821DDE0A10023483D /* ViewController.h */,
+				0753339921DDE0A10023483D /* ViewController.m */,
+				0753339B21DDE0A10023483D /* Main.storyboard */,
+				0753339E21DDE0A50023483D /* Assets.xcassets */,
+				075333A021DDE0A50023483D /* LaunchScreen.storyboard */,
+				075333A321DDE0A50023483D /* Info.plist */,
+				075333A421DDE0A50023483D /* main.m */,
+			);
+			path = ZJSCartoon;
+			sourceTree = "<group>";
+		};
+		075333AD21DDE0A60023483D /* ZJSCartoonTests */ = {
+			isa = PBXGroup;
+			children = (
+				07CE98DC21DF503100470E80 /* ZJSCarttonApiTest.m */,
+				075333AE21DDE0A60023483D /* ZJSCartoonTests.m */,
+				075333B021DDE0A60023483D /* Info.plist */,
+				07CE98DE21DF584500470E80 /* zjsTest.pch */,
+			);
+			path = ZJSCartoonTests;
+			sourceTree = "<group>";
+		};
+		075333B821DDE0A60023483D /* ZJSCartoonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				075333B921DDE0A60023483D /* ZJSCartoonUITests.m */,
+				075333BB21DDE0A60023483D /* Info.plist */,
+			);
+			path = ZJSCartoonUITests;
+			sourceTree = "<group>";
+		};
+		075333C721DDF4D80023483D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				07CE98CC21DF460D00470E80 /* ZJSNetworkContants.h */,
+				075333C921DDF5F60023483D /* ZJSBaseRequest.h */,
+				075333CA21DDF5F60023483D /* ZJSBaseRequest.m */,
+				075333C821DDF4F00023483D /* Requests */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		075333C821DDF4F00023483D /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				07CE98CD21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.h */,
+				07CE98CE21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m */,
+				07CE98D021DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.h */,
+				07CE98D121DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.m */,
+				07CE98D321DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.h */,
+				07CE98D421DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.m */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		07CE98D621DF4A8500470E80 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0753339521DDE0A10023483D /* AppDelegate.h */,
+				0753339621DDE0A10023483D /* AppDelegate.m */,
+				07CE98D721DF4AE600470E80 /* AppDelegate+ZJSSettings.h */,
+				07CE98D821DF4AE600470E80 /* AppDelegate+ZJSSettings.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		07CE98DF21DF5C8600470E80 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				07CE993521E353DE00470E80 /* CartoonReadViewController */,
+				07CE992A21E34CD300470E80 /* CartoonDetailViewController */,
+				07CE991621E2F1E900470E80 /* CartoonHomeViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		07CE98E021DF5DD300470E80 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				07CE990F21E2F06F00470E80 /* CollectionViewViewModel */,
+				07CE98F221DF5DE700470E80 /* Controller */,
+				07CE98E121DF5DD300470E80 /* TableViewViewModel */,
+				07CE98EA21DF5DD300470E80 /* WebView */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		07CE98E121DF5DD300470E80 /* TableViewViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				07CE98E621DF5DD300470E80 /* ZJSTableViewCellBaseViewModel.h */,
+				07CE98E221DF5DD300470E80 /* ZJSTableViewCellBaseViewModel.m */,
+				07CE98E721DF5DD300470E80 /* ZJSTableViewHeaderBaseViewModel.h */,
+				07CE98E321DF5DD300470E80 /* ZJSTableViewHeaderBaseViewModel.m */,
+				07CE98E821DF5DD300470E80 /* ZJSTableViewFooterBaseViewModel.h */,
+				07CE98E521DF5DD300470E80 /* ZJSTableViewFooterBaseViewModel.m */,
+				07CE98E421DF5DD300470E80 /* ZJSTableViewGroupBaseModel.h */,
+				07CE98E921DF5DD300470E80 /* ZJSTableViewGroupBaseModel.m */,
+			);
+			path = TableViewViewModel;
+			sourceTree = "<group>";
+		};
+		07CE98EA21DF5DD300470E80 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				07CE98EB21DF5DD300470E80 /* ZJSWebViewController.h */,
+				07CE98EC21DF5DD300470E80 /* ZJSWebViewController.m */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		07CE98F221DF5DE700470E80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07CE98F321DF5E0800470E80 /* ZJSBaseViewController.h */,
+				07CE98F421DF5E0800470E80 /* ZJSBaseViewController.m */,
+				07CE98F621DF5E2F00470E80 /* ZJSBaseNavigationController.h */,
+				07CE98F721DF5E2F00470E80 /* ZJSBaseNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		07CE990221DF61B100470E80 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				07CE990321DF61B900470E80 /* Reformers */,
+				07CE990421DF61CA00470E80 /* Models */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		07CE990321DF61B900470E80 /* Reformers */ = {
+			isa = PBXGroup;
+			children = (
+				07CE990521DF626600470E80 /* ZJSGetAllCartoonsHomeReformer.h */,
+				07CE990621DF626600470E80 /* ZJSGetAllCartoonsHomeReformer.m */,
+				07CE993221E34FEB00470E80 /* ZJSGetCartoonDetailReformer.h */,
+				07CE993321E34FEB00470E80 /* ZJSGetCartoonDetailReformer.m */,
+				07CE993D21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.h */,
+				07CE993E21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m */,
+			);
+			path = Reformers;
+			sourceTree = "<group>";
+		};
+		07CE990421DF61CA00470E80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07CE990A21E2F00200470E80 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				07CE990B21E2F00200470E80 /* NSString */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		07CE990B21E2F00200470E80 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				07CE990C21E2F00200470E80 /* NSString+ZJSUrlCode.h */,
+				07CE990D21E2F00200470E80 /* NSString+ZJSUrlCode.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		07CE990F21E2F06F00470E80 /* CollectionViewViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				07CE992121E3041100470E80 /* ZJSCollectionViewCellBaseViewModel.h */,
+				07CE991E21E3041000470E80 /* ZJSCollectionViewCellBaseViewModel.m */,
+				07CE992321E3041100470E80 /* ZJSCollectionViewFooterBaseViewModel.h */,
+				07CE992421E3041100470E80 /* ZJSCollectionViewFooterBaseViewModel.m */,
+				07CE991F21E3041100470E80 /* ZJSCollectionViewGroupBaseViewModel.h */,
+				07CE992221E3041100470E80 /* ZJSCollectionViewGroupBaseViewModel.m */,
+				07CE992521E3041200470E80 /* ZJSCollectionViewHeaderBaseViewModel.h */,
+				07CE992021E3041100470E80 /* ZJSCollectionViewHeaderBaseViewModel.m */,
+			);
+			path = CollectionViewViewModel;
+			sourceTree = "<group>";
+		};
+		07CE991621E2F1E900470E80 /* CartoonHomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				07CE991721E2F20700470E80 /* CollectionView */,
+				07CE98F921DF5E9700470E80 /* ZJSCartoonHomeViewController.h */,
+				07CE98FA21DF5E9700470E80 /* ZJSCartoonHomeViewController.m */,
+			);
+			path = CartoonHomeViewController;
+			sourceTree = "<group>";
+		};
+		07CE991721E2F20700470E80 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				07CE991821E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.h */,
+				07CE991921E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.m */,
+				07CE991B21E3026500470E80 /* ZJSCartoonHomeCellViewModel.h */,
+				07CE991C21E3026500470E80 /* ZJSCartoonHomeCellViewModel.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		07CE992A21E34CD300470E80 /* CartoonDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				07CE992B21E34CEE00470E80 /* CollectionView */,
+				07CE98FC21DF5EAE00470E80 /* ZJSCartoonDetailViewController.h */,
+				07CE98FD21DF5EAE00470E80 /* ZJSCartoonDetailViewController.m */,
+			);
+			path = CartoonDetailViewController;
+			sourceTree = "<group>";
+		};
+		07CE992B21E34CEE00470E80 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				07CE992C21E34D1F00470E80 /* ZJSCartoonDetailCellViewModel.h */,
+				07CE992D21E34D1F00470E80 /* ZJSCartoonDetailCellViewModel.m */,
+				07CE992F21E34D3500470E80 /* ZJSCartoonDetailCell.h */,
+				07CE993021E34D3500470E80 /* ZJSCartoonDetailCell.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		07CE993521E353DE00470E80 /* CartoonReadViewController */ = {
+			isa = PBXGroup;
+			children = (
+				07CE994021E47A4900470E80 /* Model */,
+				07CE993621E353E800470E80 /* CollectionView */,
+				07CE98FF21DF5EFA00470E80 /* ZJSCartoonReadViewController.h */,
+				07CE990021DF5EFA00470E80 /* ZJSCartoonReadViewController.m */,
+			);
+			path = CartoonReadViewController;
+			sourceTree = "<group>";
+		};
+		07CE993621E353E800470E80 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				07CE993721E3541300470E80 /* ZJSCartoonReadCell.h */,
+				07CE993821E3541300470E80 /* ZJSCartoonReadCell.m */,
+				07CE993A21E3542900470E80 /* ZJSCartoonReadCellViewModel.h */,
+				07CE993B21E3542900470E80 /* ZJSCartoonReadCellViewModel.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		07CE994021E47A4900470E80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07CE994121E47B1A00470E80 /* ZJSCartoonRead.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3F067F66B98D3A8A08581E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B8AD86C24754969121A6A76 /* Pods-ZJSCartoon.debug.xcconfig */,
+				1D21F46B9EAA8E994FB90DFF /* Pods-ZJSCartoon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD17AD42A8B2EE750C693258 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00500B2D2C416684577DD154 /* Pods_ZJSCartoon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0753339121DDE0A10023483D /* ZJSCartoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 075333BE21DDE0A60023483D /* Build configuration list for PBXNativeTarget "ZJSCartoon" */;
+			buildPhases = (
+				91A041B9BDF43EAC6FBA01C9 /* [CP] Check Pods Manifest.lock */,
+				0753338E21DDE0A10023483D /* Sources */,
+				0753338F21DDE0A10023483D /* Frameworks */,
+				0753339021DDE0A10023483D /* Resources */,
+				311F0E1FC9D87613621CD776 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZJSCartoon;
+			productName = ZJSCartoon;
+			productReference = 0753339221DDE0A10023483D /* ZJSCartoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		075333A921DDE0A60023483D /* ZJSCartoonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 075333C121DDE0A60023483D /* Build configuration list for PBXNativeTarget "ZJSCartoonTests" */;
+			buildPhases = (
+				075333A621DDE0A60023483D /* Sources */,
+				075333A721DDE0A60023483D /* Frameworks */,
+				075333A821DDE0A60023483D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				075333AC21DDE0A60023483D /* PBXTargetDependency */,
+			);
+			name = ZJSCartoonTests;
+			productName = ZJSCartoonTests;
+			productReference = 075333AA21DDE0A60023483D /* ZJSCartoonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		075333B421DDE0A60023483D /* ZJSCartoonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 075333C421DDE0A60023483D /* Build configuration list for PBXNativeTarget "ZJSCartoonUITests" */;
+			buildPhases = (
+				075333B121DDE0A60023483D /* Sources */,
+				075333B221DDE0A60023483D /* Frameworks */,
+				075333B321DDE0A60023483D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				075333B721DDE0A60023483D /* PBXTargetDependency */,
+			);
+			name = ZJSCartoonUITests;
+			productName = ZJSCartoonUITests;
+			productReference = 075333B521DDE0A60023483D /* ZJSCartoonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0753338A21DDE0A10023483D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "周建顺";
+				TargetAttributes = {
+					0753339121DDE0A10023483D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					075333A921DDE0A60023483D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0753339121DDE0A10023483D;
+					};
+					075333B421DDE0A60023483D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0753339121DDE0A10023483D;
+					};
+				};
+			};
+			buildConfigurationList = 0753338D21DDE0A10023483D /* Build configuration list for PBXProject "ZJSCartoon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0753338921DDE0A10023483D;
+			productRefGroup = 0753339321DDE0A10023483D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0753339121DDE0A10023483D /* ZJSCartoon */,
+				075333A921DDE0A60023483D /* ZJSCartoonTests */,
+				075333B421DDE0A60023483D /* ZJSCartoonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0753339021DDE0A10023483D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075333A221DDE0A50023483D /* LaunchScreen.storyboard in Resources */,
+				0753339F21DDE0A50023483D /* Assets.xcassets in Resources */,
+				0753339D21DDE0A10023483D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075333A821DDE0A60023483D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075333B321DDE0A60023483D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		311F0E1FC9D87613621CD776 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZJSCartoon/Pods-ZJSCartoon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/BFKit/BFKit.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KVOController/KVOController.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BFKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVOController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZJSCartoon/Pods-ZJSCartoon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91A041B9BDF43EAC6FBA01C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZJSCartoon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0753338E21DDE0A10023483D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CE98FE21DF5EAE00470E80 /* ZJSCartoonDetailViewController.m in Sources */,
+				07CE990E21E2F00200470E80 /* NSString+ZJSUrlCode.m in Sources */,
+				07CE993421E34FEB00470E80 /* ZJSGetCartoonDetailReformer.m in Sources */,
+				07CE993C21E3542900470E80 /* ZJSCartoonReadCellViewModel.m in Sources */,
+				07CE992E21E34D1F00470E80 /* ZJSCartoonDetailCellViewModel.m in Sources */,
+				07CE992621E3041200470E80 /* ZJSCollectionViewCellBaseViewModel.m in Sources */,
+				07CE98EF21DF5DD400470E80 /* ZJSTableViewFooterBaseViewModel.m in Sources */,
+				07CE98F821DF5E2F00470E80 /* ZJSBaseNavigationController.m in Sources */,
+				07CE98CF21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m in Sources */,
+				07CE98D221DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.m in Sources */,
+				07CE991D21E3026500470E80 /* ZJSCartoonHomeCellViewModel.m in Sources */,
+				07CE991A21E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.m in Sources */,
+				0753339A21DDE0A10023483D /* ViewController.m in Sources */,
+				07CE993921E3541300470E80 /* ZJSCartoonReadCell.m in Sources */,
+				07CE98D921DF4AE600470E80 /* AppDelegate+ZJSSettings.m in Sources */,
+				075333A521DDE0A50023483D /* main.m in Sources */,
+				07CE98F021DF5DD400470E80 /* ZJSTableViewGroupBaseModel.m in Sources */,
+				07CE992721E3041200470E80 /* ZJSCollectionViewHeaderBaseViewModel.m in Sources */,
+				075333CB21DDF5F60023483D /* ZJSBaseRequest.m in Sources */,
+				07CE98EE21DF5DD400470E80 /* ZJSTableViewHeaderBaseViewModel.m in Sources */,
+				0753339721DDE0A10023483D /* AppDelegate.m in Sources */,
+				07CE993F21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m in Sources */,
+				07CE990721DF626600470E80 /* ZJSGetAllCartoonsHomeReformer.m in Sources */,
+				07CE98D521DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.m in Sources */,
+				07CE98ED21DF5DD400470E80 /* ZJSTableViewCellBaseViewModel.m in Sources */,
+				07CE98FB21DF5E9700470E80 /* ZJSCartoonHomeViewController.m in Sources */,
+				07CE98F521DF5E0800470E80 /* ZJSBaseViewController.m in Sources */,
+				07CE992821E3041200470E80 /* ZJSCollectionViewGroupBaseViewModel.m in Sources */,
+				07CE990121DF5EFA00470E80 /* ZJSCartoonReadViewController.m in Sources */,
+				07CE993121E34D3500470E80 /* ZJSCartoonDetailCell.m in Sources */,
+				07CE992921E3041200470E80 /* ZJSCollectionViewFooterBaseViewModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075333A621DDE0A60023483D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CE98DD21DF503100470E80 /* ZJSCarttonApiTest.m in Sources */,
+				075333AF21DDE0A60023483D /* ZJSCartoonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		075333B121DDE0A60023483D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075333BA21DDE0A60023483D /* ZJSCartoonUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		075333AC21DDE0A60023483D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0753339121DDE0A10023483D /* ZJSCartoon */;
+			targetProxy = 075333AB21DDE0A60023483D /* PBXContainerItemProxy */;
+		};
+		075333B721DDE0A60023483D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0753339121DDE0A10023483D /* ZJSCartoon */;
+			targetProxy = 075333B621DDE0A60023483D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0753339B21DDE0A10023483D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0753339C21DDE0A10023483D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		075333A021DDE0A50023483D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				075333A121DDE0A50023483D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		075333BC21DDE0A60023483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		075333BD21DDE0A60023483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		075333BF21DDE0A60023483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B8AD86C24754969121A6A76 /* Pods-ZJSCartoon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHPWJAYR8E;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				INFOPLIST_FILE = ZJSCartoon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nomo.zhou.ZJSCartoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		075333C021DDE0A60023483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D21F46B9EAA8E994FB90DFF /* Pods-ZJSCartoon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHPWJAYR8E;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				INFOPLIST_FILE = ZJSCartoon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nomo.zhou.ZJSCartoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		075333C221DDE0A60023483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BFKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KVOController\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YTKNetwork\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYCache\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYText\"",
+				);
+				GCC_PREFIX_HEADER = ZJSCartoonTests/zjsTest.pch;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = ZJSCartoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"BFKit\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"KVOController\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"YTKNetwork\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYImage\"",
+					"-framework",
+					"\"YYModel\"",
+					"-framework",
+					"\"YYText\"",
+				);
+				PODS_BUILD_DIR = "${BUILD_DIR}";
+				PODS_CONFIGURATION_BUILD_DIR = "${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nomo.zhou.ZJSCartoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZJSCartoon.app/ZJSCartoon";
+			};
+			name = Debug;
+		};
+		075333C321DDE0A60023483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AFNetworking\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BFKit\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KVOController\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YTKNetwork\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYCache\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYImage\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYText\"",
+				);
+				GCC_PREFIX_HEADER = ZJSCartoonTests/zjsTest.pch;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = ZJSCartoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"BFKit\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"KVOController\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"YTKNetwork\"",
+					"-framework",
+					"\"YYCache\"",
+					"-framework",
+					"\"YYImage\"",
+					"-framework",
+					"\"YYModel\"",
+					"-framework",
+					"\"YYText\"",
+				);
+				PODS_BUILD_DIR = "${BUILD_DIR}";
+				PODS_CONFIGURATION_BUILD_DIR = "${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nomo.zhou.ZJSCartoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZJSCartoon.app/ZJSCartoon";
+			};
+			name = Release;
+		};
+		075333C521DDE0A60023483D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZJSCartoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nomo.zhou.ZJSCartoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZJSCartoon;
+			};
+			name = Debug;
+		};
+		075333C621DDE0A60023483D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ZJSCartoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nomo.zhou.ZJSCartoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZJSCartoon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0753338D21DDE0A10023483D /* Build configuration list for PBXProject "ZJSCartoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				075333BC21DDE0A60023483D /* Debug */,
+				075333BD21DDE0A60023483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		075333BE21DDE0A60023483D /* Build configuration list for PBXNativeTarget "ZJSCartoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				075333BF21DDE0A60023483D /* Debug */,
+				075333C021DDE0A60023483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		075333C121DDE0A60023483D /* Build configuration list for PBXNativeTarget "ZJSCartoonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				075333C221DDE0A60023483D /* Debug */,
+				075333C321DDE0A60023483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		075333C421DDE0A60023483D /* Build configuration list for PBXNativeTarget "ZJSCartoonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				075333C521DDE0A60023483D /* Debug */,
+				075333C621DDE0A60023483D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0753338A21DDE0A10023483D /* Project object */;
+}
