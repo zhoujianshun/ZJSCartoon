@@ -12,11 +12,16 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <BFKit/NSString+BFKit.h>
 #import <BFKit/UIScreen+BFKit.h>
+#import <MJRefresh/MJRefresh.h>
+
+#import "ZJSScreenUtility.h"
 
 #import "ZJSGetCartoonChapterDetailRequestApi.h"
 #import "ZJSGetCartoonChapterDetailReformer.h"
 
 #import "ZJSCartoonReadCell.h"
+#import "ZJSCartoonReadTopView.h"
+#import "ZJSCartoonReadBottomView.h"
 
 #import "ZJSCartoonRead.h"
 
@@ -25,12 +30,17 @@
 const CGFloat kScaleBoundLower = 0.5;
 const CGFloat kScaleBoundUpper = 2.0;
 
-@interface ZJSCartoonReadViewController ()<YTKRequestDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ZJSCartoonReadViewController ()<YTKRequestDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
 @property (nonatomic, copy) NSArray<ZJSCollectionViewCellBaseViewModel*> *datas;
 @property (nonatomic, assign) ZJSCartoonReadPageStyle pageStyle;
+
+
+@property (nonatomic, strong) ZJSCartoonReadTopView *topView;
+@property (nonatomic, strong) ZJSCartoonReadBottomView *bottomView;
+@property (nonatomic) BOOL fullScreen;
 
 @end
 
@@ -48,19 +58,72 @@ const CGFloat kScaleBoundUpper = 2.0;
     [self requestData];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
+-(BOOL)prefersStatusBarHidden{
+    if ([ZJSScreenUtility isiPhoneXScreen]) {
+        return NO;
+    }
+    return YES;
+}
+
+-(BOOL)prefersHomeIndicatorAutoHidden{
+    return YES;
+}
+
+-(UIRectEdge)preferredScreenEdgesDeferringSystemGestures{
+    return UIRectEdgeAll;
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
 -(void)setupViewContents{
+    
+
+    self.view.backgroundColor = [UIColor grayColor];
     self.title = self.carttonName;
     self.pageStyle = ZJSCartoonReadPageStyleCol;
-    self.collectionView.maximumZoomScale = 2;
-    self.collectionView.minimumZoomScale = 0.5;
-    self.collectionView.zoomScale = 0.5;
+   
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenTap:)];
+    [self.view addGestureRecognizer:tap];
+
+    [self layoutViewContents];
+}
+
+-(void)layoutViewContents{
     [self.view addSubview:self.collectionView];
+    [self.view addSubview:self.topView];
+    [self.view addSubview:self.bottomView];
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-
+    
+    
+    [self.topView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.topView.superview);
+        make.leading.equalTo(self.topView.superview);
+        make.trailing.equalTo(self.topView.superview);
+        make.height.equalTo(@([ZJSCartoonReadTopView heightForStatusBarHidden:![ZJSScreenUtility isiPhoneXScreen]]));
+    }];
+    
+    [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.bottomView.superview);
+        make.leading.equalTo(self.bottomView.superview);
+        make.trailing.equalTo(self.bottomView.superview);
+        make.height.equalTo(@([ZJSCartoonReadBottomView heightForView]));
+    }];
 }
 
 
@@ -112,6 +175,11 @@ const CGFloat kScaleBoundUpper = 2.0;
 }
 
 
+#pragma mark - UIScrollViewDelegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    self.fullScreen = YES;
+}
+
 #pragma mark - YTKRequestDelegate
 
 
@@ -128,7 +196,7 @@ const CGFloat kScaleBoundUpper = 2.0;
 }
 
 -(void)getCartoonChapterDatailSuccess:(ZJSGetCartoonChapterDetailRequestApi*)api{
-    
+    [self.collectionView.mj_header endRefreshing];
     ZJSGetCartoonChapterDetailReformer *reformer = [[ZJSGetCartoonChapterDetailReformer alloc] init];
     reformer.pageStyle = self.pageStyle;
     NSDictionary *result = [api fetchDataWithReformer:reformer];
@@ -137,19 +205,35 @@ const CGFloat kScaleBoundUpper = 2.0;
 }
 
 -(void)getCartoonChapterDatailFail:(ZJSGetCartoonChapterDetailRequestApi*)api{
-    
+    [self.collectionView.mj_header endRefreshing];
 }
 
 
 #pragma mark - event response
+
+-(void)backAction{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)screenTap:(UITapGestureRecognizer*)sender{
+    self.fullScreen = !self.fullScreen;
+}
+
+-(void)loadNewData{
+    [self requestData];
+}
+
 
 #pragma mark - private methods
 
 -(void)requestData{
     ZJSGetCartoonChapterDetailRequestApi *api = [[ZJSGetCartoonChapterDetailRequestApi alloc] initWithCartoonName:self.carttonName chapter:self.chapter];
     api.delegate = self;
+    api.hudParentView = self.view;
     [api start];
 }
+
 
 #pragma mark - getters and setters
 -(UICollectionView *)collectionView{
@@ -159,9 +243,28 @@ const CGFloat kScaleBoundUpper = 2.0;
         [_collectionView registerClass:[ZJSCartoonReadCell class] forCellWithReuseIdentifier:kCellIdentify];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     }
     return _collectionView;
+}
+
+-(ZJSCartoonReadTopView *)topView{
+    if (!_topView) {
+        _topView = [[ZJSCartoonReadTopView alloc] init];
+        typeof(self) weakself = self;
+        _topView.backActionBlock = ^(ZJSCartoonReadTopView *sender) {
+            [weakself backAction];
+        };
+    }
+    return _topView;
+}
+
+-(ZJSCartoonReadBottomView *)bottomView{
+    if (!_bottomView) {
+        _bottomView = [[ZJSCartoonReadBottomView alloc] init];
+    }
+    return _bottomView;
 }
 
 -(void)setPageStyle:(ZJSCartoonReadPageStyle)pageStyle{
@@ -171,5 +274,39 @@ const CGFloat kScaleBoundUpper = 2.0;
         vm.pageStyle = self.pageStyle;
     }];
 }
+
+-(void)setFullScreen:(BOOL)fullScreen{
+ 
+    
+    if (_fullScreen != fullScreen) {
+        _fullScreen = fullScreen;
+        if (_fullScreen) {
+            
+            CGFloat offset =  -[ZJSCartoonReadTopView heightForStatusBarHidden:![ZJSScreenUtility isiPhoneXScreen]];
+            [self.topView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.topView.superview.mas_top).offset(offset);
+            }];
+            
+            CGFloat bottomOffset =  [ZJSCartoonReadBottomView heightForView];
+            [self.bottomView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.bottom.equalTo(self.topView.superview.mas_bottom).offset(bottomOffset);
+            }];
+        }else{
+            [self.topView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(self.topView.superview.mas_top);
+            }];
+            
+            [self.bottomView mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.bottom.equalTo(self.topView.superview.mas_bottom);
+            }];
+        }
+        
+        [UIView animateWithDuration:0.2f animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
+   
+}
+
 
 @end

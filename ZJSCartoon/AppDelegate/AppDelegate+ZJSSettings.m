@@ -16,7 +16,7 @@
 -(BOOL)zjs_settings{
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
     config.baseUrl = k_zjs_network_host;
-    
+
     return YES;
 }
 

@@ -6,11 +6,11 @@
 //  Copyright © 2019 周建顺. All rights reserved.
 //
 
-#import "ZJSBaseRequest.h"
+#import "ZJSCarttonBaseRequest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJSGetAllCartoonsRequestApi : ZJSBaseRequest
+@interface ZJSGetAllCartoonsRequestApi : ZJSCarttonBaseRequest
 
 @end
 

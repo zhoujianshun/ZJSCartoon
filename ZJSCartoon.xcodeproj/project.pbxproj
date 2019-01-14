@@ -44,6 +44,10 @@
 		07CE993921E3541300470E80 /* ZJSCartoonReadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE993821E3541300470E80 /* ZJSCartoonReadCell.m */; };
 		07CE993C21E3542900470E80 /* ZJSCartoonReadCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE993B21E3542900470E80 /* ZJSCartoonReadCellViewModel.m */; };
 		07CE993F21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE993E21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m */; };
+		07CE994621E49E8300470E80 /* ZJSScreenUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE994521E49E8200470E80 /* ZJSScreenUtility.m */; };
+		07CE994C21E4A38400470E80 /* ZJSCartoonReadTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE994B21E4A38400470E80 /* ZJSCartoonReadTopView.m */; };
+		07CE994F21E4A39800470E80 /* ZJSCartoonReadBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE994E21E4A39800470E80 /* ZJSCartoonReadBottomView.m */; };
+		07EAD0DB21EC77360026B1FA /* ZJSCarttonBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 07EAD0DA21EC77360026B1FA /* ZJSCarttonBaseRequest.m */; };
 		51FACC185DF0F02EBD849CCC /* Pods_ZJSCartoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00500B2D2C416684577DD154 /* Pods_ZJSCartoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +148,14 @@
 		07CE993D21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSGetCartoonChapterDetailReformer.h; sourceTree = "<group>"; };
 		07CE993E21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSGetCartoonChapterDetailReformer.m; sourceTree = "<group>"; };
 		07CE994121E47B1A00470E80 /* ZJSCartoonRead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonRead.h; sourceTree = "<group>"; };
+		07CE994421E49E8200470E80 /* ZJSScreenUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSScreenUtility.h; sourceTree = "<group>"; };
+		07CE994521E49E8200470E80 /* ZJSScreenUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSScreenUtility.m; sourceTree = "<group>"; };
+		07CE994A21E4A38400470E80 /* ZJSCartoonReadTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonReadTopView.h; sourceTree = "<group>"; };
+		07CE994B21E4A38400470E80 /* ZJSCartoonReadTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonReadTopView.m; sourceTree = "<group>"; };
+		07CE994D21E4A39800470E80 /* ZJSCartoonReadBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonReadBottomView.h; sourceTree = "<group>"; };
+		07CE994E21E4A39800470E80 /* ZJSCartoonReadBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonReadBottomView.m; sourceTree = "<group>"; };
+		07EAD0D921EC77360026B1FA /* ZJSCarttonBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCarttonBaseRequest.h; sourceTree = "<group>"; };
+		07EAD0DA21EC77360026B1FA /* ZJSCarttonBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCarttonBaseRequest.m; sourceTree = "<group>"; };
 		1D21F46B9EAA8E994FB90DFF /* Pods-ZJSCartoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJSCartoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZJSCartoon/Pods-ZJSCartoon.release.xcconfig"; sourceTree = "<group>"; };
 		4B8AD86C24754969121A6A76 /* Pods-ZJSCartoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZJSCartoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZJSCartoon/Pods-ZJSCartoon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +211,7 @@
 		0753339421DDE0A10023483D /* ZJSCartoon */ = {
 			isa = PBXGroup;
 			children = (
+				07CE994221E49DDC00470E80 /* Utility */,
 				07CE990A21E2F00200470E80 /* Categorys */,
 				07CE990221DF61B100470E80 /* Service */,
 				07CE98E021DF5DD300470E80 /* Basic */,
@@ -243,6 +256,8 @@
 				075333C921DDF5F60023483D /* ZJSBaseRequest.h */,
 				075333CA21DDF5F60023483D /* ZJSBaseRequest.m */,
 				075333C821DDF4F00023483D /* Requests */,
+				07EAD0D921EC77360026B1FA /* ZJSCarttonBaseRequest.h */,
+				07EAD0DA21EC77360026B1FA /* ZJSCarttonBaseRequest.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -433,6 +448,7 @@
 		07CE993521E353DE00470E80 /* CartoonReadViewController */ = {
 			isa = PBXGroup;
 			children = (
+				07CE994921E4A36B00470E80 /* Views */,
 				07CE994021E47A4900470E80 /* Model */,
 				07CE993621E353E800470E80 /* CollectionView */,
 				07CE98FF21DF5EFA00470E80 /* ZJSCartoonReadViewController.h */,
@@ -458,6 +474,26 @@
 				07CE994121E47B1A00470E80 /* ZJSCartoonRead.h */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		07CE994221E49DDC00470E80 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				07CE994421E49E8200470E80 /* ZJSScreenUtility.h */,
+				07CE994521E49E8200470E80 /* ZJSScreenUtility.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		07CE994921E4A36B00470E80 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				07CE994A21E4A38400470E80 /* ZJSCartoonReadTopView.h */,
+				07CE994B21E4A38400470E80 /* ZJSCartoonReadTopView.m */,
+				07CE994D21E4A39800470E80 /* ZJSCartoonReadBottomView.h */,
+				07CE994E21E4A39800470E80 /* ZJSCartoonReadBottomView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E3F067F66B98D3A8A08581E4 /* Pods */ = {
@@ -672,6 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07CE994C21E4A38400470E80 /* ZJSCartoonReadTopView.m in Sources */,
 				07CE98FE21DF5EAE00470E80 /* ZJSCartoonDetailViewController.m in Sources */,
 				07CE990E21E2F00200470E80 /* NSString+ZJSUrlCode.m in Sources */,
 				07CE993421E34FEB00470E80 /* ZJSGetCartoonDetailReformer.m in Sources */,
@@ -685,6 +722,7 @@
 				07CE991D21E3026500470E80 /* ZJSCartoonHomeCellViewModel.m in Sources */,
 				07CE991A21E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.m in Sources */,
 				0753339A21DDE0A10023483D /* ViewController.m in Sources */,
+				07CE994F21E4A39800470E80 /* ZJSCartoonReadBottomView.m in Sources */,
 				07CE993921E3541300470E80 /* ZJSCartoonReadCell.m in Sources */,
 				07CE98D921DF4AE600470E80 /* AppDelegate+ZJSSettings.m in Sources */,
 				075333A521DDE0A50023483D /* main.m in Sources */,
@@ -693,9 +731,11 @@
 				075333CB21DDF5F60023483D /* ZJSBaseRequest.m in Sources */,
 				07CE98EE21DF5DD400470E80 /* ZJSTableViewHeaderBaseViewModel.m in Sources */,
 				0753339721DDE0A10023483D /* AppDelegate.m in Sources */,
+				07EAD0DB21EC77360026B1FA /* ZJSCarttonBaseRequest.m in Sources */,
 				07CE993F21E357C000470E80 /* ZJSGetCartoonChapterDetailReformer.m in Sources */,
 				07CE990721DF626600470E80 /* ZJSGetAllCartoonsHomeReformer.m in Sources */,
 				07CE98D521DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.m in Sources */,
+				07CE994621E49E8300470E80 /* ZJSScreenUtility.m in Sources */,
 				07CE98ED21DF5DD400470E80 /* ZJSTableViewCellBaseViewModel.m in Sources */,
 				07CE98FB21DF5E9700470E80 /* ZJSCartoonHomeViewController.m in Sources */,
 				07CE98F521DF5E0800470E80 /* ZJSBaseViewController.m in Sources */,

@@ -8,6 +8,13 @@
 
 #import "ZJSBaseRequest.h"
 
+
+
+@interface ZJSBaseRequest()
+
+
+@end
+
 @implementation ZJSBaseRequest
 
 

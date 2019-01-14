@@ -10,7 +10,7 @@
 #import "ZJSCartoonRead.h"
 
 
-#define k_cartoon_chapter_minimumLineSpacing 4.f
+#define k_cartoon_chapter_minimumLineSpacing 0.f
 #define k_cartoon_chapter_minimumInteritemSpacing 2.f
 #define k_cartoon_chapter_inset UIEdgeInsetsMake(0, 0, 8, 0)
 #define k_cartoon_chapter_col 1

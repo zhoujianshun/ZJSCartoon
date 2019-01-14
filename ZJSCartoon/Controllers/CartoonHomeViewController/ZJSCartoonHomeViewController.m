@@ -11,6 +11,7 @@
 #import <Masonry/Masonry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <BFKit/NSString+BFKit.h>
+#import <MJRefresh/MJRefresh.h>
 
 #import "ZJSGetAllCartoonsRequestApi.h"
 #import "ZJSGetAllCartoonsHomeReformer.h"
@@ -118,23 +119,29 @@
 }
 
 -(void)getAllCartoonsSuccess:(ZJSGetAllCartoonsRequestApi*)api{
+    [self.collectionView.mj_header endRefreshing];
     NSDictionary *result = [api fetchDataWithReformer:[[ZJSGetAllCartoonsHomeReformer alloc] init]];
     self.datas = result[ZJSGetAllCartoonsHomeReformerResultKey];
     [self.collectionView reloadData];
 }
 
 -(void)getAllCartoonsFail:(ZJSGetAllCartoonsRequestApi*)api{
-    
+    [self.collectionView.mj_header endRefreshing];
 }
 
 
 #pragma mark - event response
+
+-(void)loadNewData{
+    [self requestData];
+}
 
 #pragma mark - private methods
 
 -(void)requestData{
     ZJSGetAllCartoonsRequestApi *api = [[ZJSGetAllCartoonsRequestApi alloc] init];
     api.delegate = self;
+    api.hudParentView = self.view;
     [api start];
 }
 
@@ -147,6 +154,7 @@
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     }
     return _collectionView;
 }

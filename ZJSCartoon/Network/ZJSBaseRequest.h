@@ -8,6 +8,7 @@
 
 #import <YTKNetwork/YTKNetwork.h>
 
+
 @class ZJSBaseRequest;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,7 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface ZJSBaseRequest : YTKBaseRequest
-
 
 /**
  根据输入的reformer，返回业务层相关的数据
