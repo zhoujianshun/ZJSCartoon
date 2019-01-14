@@ -16,6 +16,7 @@
 		075333AF21DDE0A60023483D /* ZJSCartoonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075333AE21DDE0A60023483D /* ZJSCartoonTests.m */; };
 		075333BA21DDE0A60023483D /* ZJSCartoonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 075333B921DDE0A60023483D /* ZJSCartoonUITests.m */; };
 		075333CB21DDF5F60023483D /* ZJSBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 075333CA21DDF5F60023483D /* ZJSBaseRequest.m */; };
+		078AC47821EC8CF60067C91A /* ZJSCartoonReadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 078AC47721EC8CF60067C91A /* ZJSCartoonReadView.m */; };
 		07CE98CF21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98CE21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m */; };
 		07CE98D221DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98D121DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.m */; };
 		07CE98D521DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 07CE98D421DF482300470E80 /* ZJSGetCartoonChapterDetailRequestApi.m */; };
@@ -88,6 +89,8 @@
 		075333BB21DDE0A60023483D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075333C921DDF5F60023483D /* ZJSBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSBaseRequest.h; sourceTree = "<group>"; };
 		075333CA21DDF5F60023483D /* ZJSBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSBaseRequest.m; sourceTree = "<group>"; };
+		078AC47621EC8CF60067C91A /* ZJSCartoonReadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonReadView.h; sourceTree = "<group>"; };
+		078AC47721EC8CF60067C91A /* ZJSCartoonReadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonReadView.m; sourceTree = "<group>"; };
 		07CE98CC21DF460D00470E80 /* ZJSNetworkContants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSNetworkContants.h; sourceTree = "<group>"; };
 		07CE98CD21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSGetAllCartoonsRequestApi.h; sourceTree = "<group>"; };
 		07CE98CE21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSGetAllCartoonsRequestApi.m; sourceTree = "<group>"; };
@@ -492,6 +495,8 @@
 				07CE994B21E4A38400470E80 /* ZJSCartoonReadTopView.m */,
 				07CE994D21E4A39800470E80 /* ZJSCartoonReadBottomView.h */,
 				07CE994E21E4A39800470E80 /* ZJSCartoonReadBottomView.m */,
+				078AC47621EC8CF60067C91A /* ZJSCartoonReadView.h */,
+				078AC47721EC8CF60067C91A /* ZJSCartoonReadView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -723,6 +728,7 @@
 				07CE991A21E2F29800470E80 /* ZJSCartoonHomeCollectionViewCell.m in Sources */,
 				0753339A21DDE0A10023483D /* ViewController.m in Sources */,
 				07CE994F21E4A39800470E80 /* ZJSCartoonReadBottomView.m in Sources */,
+				078AC47821EC8CF60067C91A /* ZJSCartoonReadView.m in Sources */,
 				07CE993921E3541300470E80 /* ZJSCartoonReadCell.m in Sources */,
 				07CE98D921DF4AE600470E80 /* AppDelegate+ZJSSettings.m in Sources */,
 				075333A521DDE0A50023483D /* main.m in Sources */,

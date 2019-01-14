@@ -63,7 +63,11 @@
 }
 
 #pragma mark - event response
-
+-(void)switchLayoutAction:(UIButton*)sender{
+    if (self.switchActionBlock) {
+        self.switchActionBlock(self);
+    }
+}
 
 
 #pragma mark - getters and setters
@@ -72,6 +76,7 @@
     if (!_layoutTypeButton) {
         _layoutTypeButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [_layoutTypeButton setTitle:@"竖" forState:UIControlStateNormal];
+        [_layoutTypeButton addTarget:self action:@selector(switchLayoutAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _layoutTypeButton;
 }
