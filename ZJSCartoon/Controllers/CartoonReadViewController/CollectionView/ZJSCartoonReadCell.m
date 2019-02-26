@@ -79,6 +79,7 @@
 #pragma mark - getters and setters
 -(void)setViewModel:(ZJSCartoonReadCellViewModel *)viewModel{
     _viewModel = viewModel;
+    self.scrollView.zoomScale = 1.f;
     if (_viewModel.imageUrl) {
         NSURL *url = [NSURL URLWithString:[_viewModel.imageUrl URLEncodeString]];
         typeof(self) weakself = self;
