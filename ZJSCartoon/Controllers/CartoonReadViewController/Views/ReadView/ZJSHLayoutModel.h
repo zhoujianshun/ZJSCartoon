@@ -7,10 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "ZJSCollectionViewCellBaseViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZJSHLayoutModel : NSObject
+@interface ZJSHLayoutModel : NSObject<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
+
+@property (nonatomic, strong) UICollectionViewFlowLayout *hLayout;
+@property (nonatomic, copy) NSArray<ZJSCollectionViewCellBaseViewModel*> *datas;
+
+-(void)registerCell:(UICollectionView*)collectionView;
 
 @end
 

@@ -63,7 +63,7 @@
     if ([self.delegate respondsToSelector:@selector(zjs_zoomCollectionViewLayout:cellSizeAtIndexPath:)]) {
         obj = (id<ZJSScalingListLayoutCustomDelegate>)self.delegate;
     }
-    
+    CGRect last = CGRectZero;
     for (int i = 0; i < itemCount; i++) {
         NSInteger rowIdx = i/columnCount;
         NSInteger columnIdx = i%columnCount;
@@ -75,8 +75,9 @@
             lineSpace = [self.delegate zjs_zoomCollectionViewLayout:self lineSpaceAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         }
         
-        CGPoint point = CGPointMake((itemSize.width) * columnIdx, (itemSize.height + lineSpace) * rowIdx);
+        CGPoint point = CGPointMake((itemSize.width) * columnIdx,  CGRectGetMaxY(last) + lineSpace);
         CGRect rect = CGRectMake(point.x, point.y, itemSize.width, itemSize.height);
+        last = rect;
         UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForItem:i inSection:0]] ;
         attrs.frame = ZJS_ZoomCGRectScale(rect, self.scale);
         [mArray addObject:attrs];

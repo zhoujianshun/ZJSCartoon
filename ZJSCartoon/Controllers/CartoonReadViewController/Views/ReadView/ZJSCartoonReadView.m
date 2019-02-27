@@ -12,13 +12,22 @@
 
 #import <MJRefresh/MJRefresh.h>
 
+#import "ZJSHLayoutModel.h"
+#import "ZJSVLayoutModel.h"
+
+#import "ZJSCartoonReadCellViewModel.h"
+
+
 
 #define kCellIdentify @"kTableIdentify"
 
-@interface ZJSCartoonReadView ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
+@interface ZJSCartoonReadView ()
 
-@property (nonatomic, strong) UICollectionViewFlowLayout *vLayout;
-@property (nonatomic, strong) UICollectionViewFlowLayout *hLayout;
+
+@property (nonatomic, strong) ZJSHLayoutModel *hLayoutModel;
+@property (nonatomic, strong) ZJSVLayoutModel *vLayoutModel;
+
+
 
 @end
 
@@ -46,64 +55,16 @@
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
-}
-
-
-#pragma mark - UICollectionViewDataSource
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    return 1;
-}
-
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return self.datas.count;
-}
-
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    ZJSCartoonReadCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentify forIndexPath:indexPath];
-    ZJSCartoonReadCellViewModel *vm = (ZJSCartoonReadCellViewModel*)[self.datas objectAtIndex:indexPath.item];
-    cell.viewModel = vm;
     
-    return cell;
-}
+    [self addSubview:self.vLayoutModel.scrollView];
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [self.vLayoutModel.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.collectionView);
+    }];
     
-    ZJSCartoonReadCellViewModel *vm = (ZJSCartoonReadCellViewModel*)[self.datas objectAtIndex:indexPath.item];
-    [vm cellTappedAction];
-    
-    //    ZJSCartoonDetailViewController *vc = [[ZJSCartoonDetailViewController alloc] init];
-    //    vc.cartoonVM = vm;
-    //    [self.navigationController pushViewController:vc animated:YES];
-}
-
-#pragma mark - UICollectionViewDelegateFlowLayout
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    ZJSCartoonReadCellViewModel *vm = (ZJSCartoonReadCellViewModel *)[self.datas objectAtIndex:indexPath.item];
-    
-    return vm.cellSize;
-}
-
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-    return k_cartoon_chapter_minimumLineSpacing;
-}
-
--(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
-    return k_cartoon_chapter_minimumInteritemSpacing;
-}
-
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return k_cartoon_chapter_inset;
 }
 
 
-#pragma mark - UIScrollViewDelegate
--(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-  
-    if ([self.delegate respondsToSelector:@selector(ZJSCartoonReadViewDidScroll:)]) {
-        [self.delegate ZJSCartoonReadViewDidScroll:self];
-    }
-}
 
 #pragma mark - private methods
 -(void)loadNewData{
@@ -118,7 +79,11 @@
 }
 
 -(void)reloadData{
+    self.vLayoutModel.datas = self.datas;
+    self.hLayoutModel.datas = self.datas;
     [self.collectionView reloadData];
+    
+    [self.vLayoutModel reloadData];
 }
 
 -(void)switchLayout{
@@ -142,13 +107,29 @@
 }
 
 #pragma mark - getters and setters
+
+-(ZJSVLayoutModel *)vLayoutModel{
+    if (!_vLayoutModel) {
+        _vLayoutModel = [[ZJSVLayoutModel alloc] init];
+    }
+    return _vLayoutModel;
+}
+
+-(ZJSHLayoutModel *)hLayoutModel{
+    if (!_hLayoutModel) {
+        _hLayoutModel = [[ZJSHLayoutModel alloc] init];
+    }
+    return _hLayoutModel;
+}
+
 -(UICollectionView *)collectionView{
     if (!_collectionView) {
 
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.vLayout];
-        [_collectionView registerClass:[ZJSCartoonReadCell class] forCellWithReuseIdentifier:kCellIdentify];
-        _collectionView.delegate = self;
-        _collectionView.dataSource = self;
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.vLayoutModel.vLayout];
+        [self.vLayoutModel registerCell:_collectionView];
+        [self.hLayoutModel registerCell:_collectionView];
+        _collectionView.delegate = self.vLayoutModel;
+        _collectionView.dataSource = self.vLayoutModel;
         _collectionView.backgroundColor = [UIColor clearColor];
        // _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
         
@@ -156,20 +137,9 @@
     return _collectionView;
 }
 
--(UICollectionViewFlowLayout *)vLayout{
-    if (!_vLayout) {
-        _vLayout = [[UICollectionViewFlowLayout alloc] init];
-    }
-    return _vLayout;
-}
 
--(UICollectionViewFlowLayout *)hLayout{
-    if (!_hLayout) {
-        _hLayout = [[UICollectionViewFlowLayout alloc] init];
-        _hLayout.scrollDirection= UICollectionViewScrollDirectionHorizontal;
-    }
-    return _hLayout;
-}
+
+
 
 -(void)setPageStyle:(ZJSCartoonReadPageStyle)pageStyle{
     _pageStyle = pageStyle;
@@ -182,16 +152,37 @@
     switch (pageStyle) {
         case ZJSCartoonReadPageStyleCol:
         {
-            [self.collectionView setCollectionViewLayout:self.vLayout animated:NO completion:^(BOOL finished) {
+            NSIndexPath *indexPath = [[self.collectionView indexPathsForVisibleItems] firstObject];
+            self.vLayoutModel.scrollView.hidden = NO;
+            self.collectionView.delegate = self.vLayoutModel;
+            self.collectionView.dataSource = self.vLayoutModel;
+            [self.collectionView setCollectionViewLayout:self.vLayoutModel.vLayout animated:NO completion:^(BOOL finished) {
                 [weakself.collectionView reloadData];
+                [weakself.vLayoutModel reloadData];
+                if (indexPath) {
+                    [weakself.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionTop];
+                }
             }];
+           
         }
             break;
             
         default:
         {
-            [self.collectionView setCollectionViewLayout:self.hLayout animated:NO completion:^(BOOL finished) {
+         //   self.vLayoutModel.scrollView.zoomScale = 1.f;
+            
+            
+            NSIndexPath *indexPath = [[self.collectionView indexPathsForVisibleItems] firstObject];
+            self.vLayoutModel.scrollView.hidden = YES;
+            self.collectionView.delegate = self.hLayoutModel;
+            self.collectionView.dataSource = self.hLayoutModel;
+            [self.collectionView setCollectionViewLayout:self.hLayoutModel.hLayout animated:NO completion:^(BOOL finished) {
                 [weakself.collectionView reloadData];
+             
+                if (indexPath) {
+                    [weakself.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionLeft];
+                }
+
             }];
         }
             break;

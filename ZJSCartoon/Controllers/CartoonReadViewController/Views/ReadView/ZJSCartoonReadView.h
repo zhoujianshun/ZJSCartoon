@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "ZJSCartoonRead.h"
-#import "ZJSCartoonReadCell.h"
+
+#import "ZJSCollectionViewCellBaseViewModel.h"
 
 @class ZJSCartoonReadView;
 
