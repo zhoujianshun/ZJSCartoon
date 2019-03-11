@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071E1CCF223606A600C71EA0 /* ZJSCartoonSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071E1CCE223606A600C71EA0 /* ZJSCartoonSettingsViewController.m */; };
+		071E1CD122360B2000C71EA0 /* ZJSCartoonSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 071E1CD022360B2000C71EA0 /* ZJSCartoonSettingsViewController.xib */; };
+		071E1CD7223610B900C71EA0 /* ZJSSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 071E1CD6223610B900C71EA0 /* ZJSSettingsManager.m */; };
 		074BDC512224EBA400885535 /* UICollectionView+ZJSZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 074BDC482224EBA400885535 /* UICollectionView+ZJSZoom.m */; };
 		074BDC522224EBA400885535 /* ZJSScalingGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 074BDC4A2224EBA400885535 /* ZJSScalingGridLayout.m */; };
 		074BDC532224EBA400885535 /* ZJSScalingListLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 074BDC4B2224EBA400885535 /* ZJSScalingListLayout.m */; };
@@ -78,6 +81,12 @@
 
 /* Begin PBXFileReference section */
 		00500B2D2C416684577DD154 /* Pods_ZJSCartoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZJSCartoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		071E1CCD223606A600C71EA0 /* ZJSCartoonSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSCartoonSettingsViewController.h; sourceTree = "<group>"; };
+		071E1CCE223606A600C71EA0 /* ZJSCartoonSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSCartoonSettingsViewController.m; sourceTree = "<group>"; };
+		071E1CD022360B2000C71EA0 /* ZJSCartoonSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZJSCartoonSettingsViewController.xib; sourceTree = "<group>"; };
+		071E1CD322360F4100C71EA0 /* ZJSSettingsContants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSSettingsContants.h; sourceTree = "<group>"; };
+		071E1CD5223610B900C71EA0 /* ZJSSettingsManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJSSettingsManager.h; sourceTree = "<group>"; };
+		071E1CD6223610B900C71EA0 /* ZJSSettingsManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJSSettingsManager.m; sourceTree = "<group>"; };
 		074BDC482224EBA400885535 /* UICollectionView+ZJSZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+ZJSZoom.m"; sourceTree = "<group>"; };
 		074BDC492224EBA400885535 /* ZJSScalingLayoutProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSScalingLayoutProtocol.h; sourceTree = "<group>"; };
 		074BDC4A2224EBA400885535 /* ZJSScalingGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSScalingGridLayout.m; sourceTree = "<group>"; };
@@ -211,6 +220,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071E1CD222360F2600C71EA0 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				071E1CCD223606A600C71EA0 /* ZJSCartoonSettingsViewController.h */,
+				071E1CCE223606A600C71EA0 /* ZJSCartoonSettingsViewController.m */,
+				071E1CD022360B2000C71EA0 /* ZJSCartoonSettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		071E1CD42236107000C71EA0 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				071E1CD322360F4100C71EA0 /* ZJSSettingsContants.h */,
+				071E1CD5223610B900C71EA0 /* ZJSSettingsManager.h */,
+				071E1CD6223610B900C71EA0 /* ZJSSettingsManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		074BDC472224EBA400885535 /* ZoomCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +294,7 @@
 		0753339421DDE0A10023483D /* ZJSCartoon */ = {
 			isa = PBXGroup;
 			children = (
+				071E1CD42236107000C71EA0 /* Manager */,
 				07CE994221E49DDC00470E80 /* Utility */,
 				07CE990A21E2F00200470E80 /* Categorys */,
 				07CE990221DF61B100470E80 /* Service */,
@@ -343,6 +373,7 @@
 		07CE98DF21DF5C8600470E80 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				071E1CD222360F2600C71EA0 /* Settings */,
 				07CE993521E353DE00470E80 /* CartoonReadViewController */,
 				07CE992A21E34CD300470E80 /* CartoonDetailViewController */,
 				07CE991621E2F1E900470E80 /* CartoonHomeViewController */,
@@ -678,6 +709,7 @@
 			files = (
 				075333A221DDE0A50023483D /* LaunchScreen.storyboard in Resources */,
 				0753339F21DDE0A50023483D /* Assets.xcassets in Resources */,
+				071E1CD122360B2000C71EA0 /* ZJSCartoonSettingsViewController.xib in Resources */,
 				0753339D21DDE0A10023483D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,6 +808,7 @@
 				07CE992E21E34D1F00470E80 /* ZJSCartoonDetailCellViewModel.m in Sources */,
 				07CE992621E3041200470E80 /* ZJSCollectionViewCellBaseViewModel.m in Sources */,
 				07CE98EF21DF5DD400470E80 /* ZJSTableViewFooterBaseViewModel.m in Sources */,
+				071E1CCF223606A600C71EA0 /* ZJSCartoonSettingsViewController.m in Sources */,
 				07CE98F821DF5E2F00470E80 /* ZJSBaseNavigationController.m in Sources */,
 				07CE98CF21DF471900470E80 /* ZJSGetAllCartoonsRequestApi.m in Sources */,
 				07CE98D221DF476F00470E80 /* ZJSGetCartoonDetailRequestApi.m in Sources */,
@@ -807,6 +840,7 @@
 				07CE98F521DF5E0800470E80 /* ZJSBaseViewController.m in Sources */,
 				07CE992821E3041200470E80 /* ZJSCollectionViewGroupBaseViewModel.m in Sources */,
 				07CE990121DF5EFA00470E80 /* ZJSCartoonReadViewController.m in Sources */,
+				071E1CD7223610B900C71EA0 /* ZJSSettingsManager.m in Sources */,
 				07CE993121E34D3500470E80 /* ZJSCartoonDetailCell.m in Sources */,
 				07CE992921E3041200470E80 /* ZJSCollectionViewFooterBaseViewModel.m in Sources */,
 			);

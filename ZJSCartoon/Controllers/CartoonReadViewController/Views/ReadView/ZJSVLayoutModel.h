@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "ZJSScalingListLayout.h"
 
 #import "ZJSCollectionViewCellBaseViewModel.h"
 
@@ -16,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZJSVLayoutModel : NSObject<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
 
-@property (nonatomic, strong) UICollectionViewFlowLayout *vLayout;
+@property (nonatomic, strong) ZJSScalingListLayout *vLayout;
 @property (nonatomic, copy) NSArray<ZJSCollectionViewCellBaseViewModel*> *datas;
 // 竖屏幕缩放
 @property (nonatomic, strong) UIView *dummyZoomView;
@@ -24,6 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)registerCell:(UICollectionView*)collectionView;
 -(void)reloadData;
+
+/**
+ 切换layout时调用，防止放大后造成的UI问题
+ */
+-(void)reset;
 
 @end
 

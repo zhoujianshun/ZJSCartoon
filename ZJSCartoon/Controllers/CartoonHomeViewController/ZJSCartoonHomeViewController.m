@@ -17,7 +17,10 @@
 #import "ZJSGetAllCartoonsHomeReformer.h"
 
 #import "ZJSCartoonHomeCollectionViewCell.h"
+
 #import "ZJSCartoonDetailViewController.h"
+#import "ZJSCartoonSettingsViewController.h"
+#import "ZJSBaseNavigationController.h"
 
 #define kCellIdentify @"kTableIdentify"
 
@@ -46,6 +49,15 @@
 
 
 -(void)setupViewContents{
+    
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [rightButton setTitle:@"Settings" forState:UIControlStateNormal];
+    [rightButton sizeToFit];
+    [rightButton addTarget:self action:@selector(rightButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    self.navigationItem.rightBarButtonItems = @[rightItem];
+    
     [self.view addSubview:self.collectionView];
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -134,6 +146,12 @@
 
 -(void)loadNewData{
     [self requestData];
+}
+
+-(void)rightButtonAction:(UIButton*)sender{
+    ZJSCartoonSettingsViewController *rootVC = [[ZJSCartoonSettingsViewController alloc] init];
+    ZJSBaseNavigationController *navi = [[ZJSBaseNavigationController alloc] initWithRootViewController:rootVC];
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 #pragma mark - private methods

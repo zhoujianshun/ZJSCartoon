@@ -148,11 +148,33 @@
         vm.pageStyle = self.pageStyle;
     }];
     
+    CGPoint center = CGPointMake(CGRectGetWidth(self.collectionView.frame)/2.f, CGRectGetHeight(self.collectionView.frame)/2.f);
+    CGPoint point;
+    if (pageStyle == ZJSCartoonReadPageStyleCol) {
+        point = CGPointMake(self.collectionView.contentOffset.x + center.x, center.y);
+    }else{
+        point = CGPointMake(center.x, self.collectionView.contentOffset.y + center.y);
+    }
+    
+    NSArray *visibleCells =   [self.collectionView visibleCells];
+    __block UITableViewCell *centerCell;
+    [visibleCells enumerateObjectsUsingBlock:^(UITableViewCell *cell, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (CGRectContainsPoint(cell.frame, point)) {
+            centerCell = cell;
+            *stop = YES;
+        }
+    }];
+    NSIndexPath *indexPath;
+    if (centerCell) {
+        indexPath = [self.collectionView indexPathForCell:centerCell];
+    }
+   
+    
     typeof(self) weakself = self;
     switch (pageStyle) {
         case ZJSCartoonReadPageStyleCol:
         {
-            NSIndexPath *indexPath = [[self.collectionView indexPathsForVisibleItems] firstObject];
+            
             self.vLayoutModel.scrollView.hidden = NO;
             self.collectionView.delegate = self.vLayoutModel;
             self.collectionView.dataSource = self.vLayoutModel;
@@ -160,7 +182,7 @@
                 [weakself.collectionView reloadData];
                 [weakself.vLayoutModel reloadData];
                 if (indexPath) {
-                    [weakself.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionTop];
+                    [weakself.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionCenteredVertically];
                 }
             }];
            
@@ -169,18 +191,16 @@
             
         default:
         {
-         //   self.vLayoutModel.scrollView.zoomScale = 1.f;
-            
-            
-            NSIndexPath *indexPath = [[self.collectionView indexPathsForVisibleItems] firstObject];
+            [self.vLayoutModel reset];
             self.vLayoutModel.scrollView.hidden = YES;
+            
             self.collectionView.delegate = self.hLayoutModel;
             self.collectionView.dataSource = self.hLayoutModel;
             [self.collectionView setCollectionViewLayout:self.hLayoutModel.hLayout animated:NO completion:^(BOOL finished) {
                 [weakself.collectionView reloadData];
              
                 if (indexPath) {
-                    [weakself.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionLeft];
+                    [weakself.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
                 }
 
             }];

@@ -35,9 +35,29 @@
             id<ZJSScalingLayoutProtocol> obj = (id<ZJSScalingLayoutProtocol>)self.vLayout;
             CGSize size = [obj contentSizeForScale:self.scrollView.zoomScale];
             self.scrollView.contentSize = size;
+//            self.scrollView.zoomScale = 1.f;
+            self.scrollView.contentOffset = self.collectionView.contentOffset;
             self.dummyZoomView.frame = CGRectMake(0, 0, size.width, size.height);
         }
     });
+}
+
+
+/**
+ 切换layout时调用，防止放大后造成的UI问题
+ */
+-(void)reset{
+     self.collectionView.transform = CGAffineTransformMakeScale(1, 1);
+     self.scrollView.zoomScale = 1.f;
+
+//            [UIView animateWithDuration:0.5 animations:^{
+//    //            self.collectionView.contentSize = CGSizeApplyAffineTransform(self.collectionView.contentSize, CGAffineTransformMakeScale(0.5, 0.5));
+//    //            self.scrollView.zoomScale = 1;
+////                self.dummyZoomView.transform =CGAffineTransformMakeScale(1,1);
+//            } completion:^(BOOL finished) {
+//               // self.collectionView.transform = CGAffineTransformMakeScale(1, 1);
+//               // self.scrollView.zoomScale = 1.f;
+//            }];
 }
 
 #pragma mark - getters and setters
@@ -59,7 +79,7 @@
         _scrollView.delegate = self;
         _scrollView.bouncesZoom = NO;
         _scrollView.alpha = 0.5;
-        _scrollView.backgroundColor = [UIColor redColor];
+       // _scrollView.backgroundColor = [UIColor redColor];
         _scrollView.minimumZoomScale = 1.0;
         _scrollView.zoomScale = 1.0;
         _scrollView.maximumZoomScale = 4.0;
@@ -154,11 +174,13 @@
 //}
 
 #pragma mark - ZJSScalingListLayoutCustomDelegate
-
 -(CGSize)zjs_zoomCollectionViewLayout:(ZJSScalingListLayout*)collectionViewLayout cellSizeAtIndexPath:(NSIndexPath*)indexPath{
-    
+ 
     ZJSCartoonReadCellViewModel *vm = (ZJSCartoonReadCellViewModel *)[self.datas objectAtIndex:indexPath.item];
-    
+   
+    static float height = 0;
+    height = height + vm.cellSize.height;
+    NSLog(@"height:%@", @(height));
     return vm.cellSize;
 }
 

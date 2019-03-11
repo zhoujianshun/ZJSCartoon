@@ -12,7 +12,7 @@
 
 #define k_cartoon_chapter_minimumLineSpacing 0.f
 #define k_cartoon_chapter_minimumInteritemSpacing 2.f
-#define k_cartoon_chapter_inset UIEdgeInsetsMake(0, 0, 8, 0)
+#define k_cartoon_chapter_inset UIEdgeInsetsMake(0, 0, 0, 0)
 #define k_cartoon_chapter_col 1
 #define k_cartoon_chapter_cell_Image_multiply (1530.f/1072.f)
 

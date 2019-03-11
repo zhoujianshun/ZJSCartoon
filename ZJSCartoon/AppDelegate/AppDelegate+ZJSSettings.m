@@ -9,13 +9,14 @@
 #import "AppDelegate+ZJSSettings.h"
 
 #import "YTKNetwork.h"
-#import "ZJSNetworkContants.h"
+#import "ZJSSettingsManager.h"
+
 
 @implementation AppDelegate (ZJSSettings)
 
 -(BOOL)zjs_settings{
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
-    config.baseUrl = k_zjs_network_host;
+    config.baseUrl = [ZJSSettingsManager readBaseUrl];
 
     return YES;
 }

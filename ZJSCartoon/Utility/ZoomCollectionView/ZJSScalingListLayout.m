@@ -65,7 +65,7 @@
     }
     CGRect last = CGRectZero;
     for (int i = 0; i < itemCount; i++) {
-        NSInteger rowIdx = i/columnCount;
+       // NSInteger rowIdx = i/columnCount;
         NSInteger columnIdx = i%columnCount;
         
         CGSize itemSize = [obj zjs_zoomCollectionViewLayout:self cellSizeAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
@@ -126,14 +126,14 @@
         obj = (id<ZJSScalingListLayoutCustomDelegate>)self.delegate;
     }
     
-    
+    CGRect last = CGRectZero;
     NSInteger itemCount = [self.collectionView numberOfItemsInSection:0];
     NSInteger columnCount = 1;
     
     CGFloat width = 10;
     CGFloat height = 10;
     for (int i = 0; i < itemCount; i++) {
-        NSInteger rowIdx = i/columnCount;
+       // NSInteger rowIdx = i/columnCount;
         NSInteger columnIdx = i%columnCount;
         
         CGSize itemSize = [obj zjs_zoomCollectionViewLayout:self cellSizeAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
@@ -143,8 +143,9 @@
             lineSpace = [self.delegate zjs_zoomCollectionViewLayout:self lineSpaceAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
         }
         
-        CGPoint point = CGPointMake((itemSize.width) * columnIdx, (itemSize.height + lineSpace) * rowIdx);
+        CGPoint point = CGPointMake((itemSize.width) * columnIdx,  CGRectGetMaxY(last) + lineSpace);
         CGRect rect = CGRectMake(point.x, point.y, itemSize.width, itemSize.height);
+        last = rect;
         width = itemSize.width;
         height = CGRectGetMaxY(rect);
     }

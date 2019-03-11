@@ -9,7 +9,8 @@
 #ifndef ZJSNetworkContants_h
 #define ZJSNetworkContants_h
 
-#define k_zjs_network_host @"http://192.168.1.107:3000"
+//#define k_zjs_network_host @"http://192.168.1.107:3000"
+#define k_zjs_network_host @"http://192.168.1.175:3000"
 
 
 #endif /* ZJSNetworkContants_h */
